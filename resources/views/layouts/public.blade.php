@@ -1,17 +1,63 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+    <section>
+        <div class="search-container">
+            <select class="grade-dropdown" id="gradeDropdown">
+                <option value="">All Grades</option>
+                @foreach($yearLevels as $yearLevel)
+                    <option value="{{ $yearLevel }}"> 
+                        {{ $yearLevel }}
+                    </option>
+                @endforeach
+            </select>
+            <input type="text" class="search-box" id="searchInput" placeholder="Enter student name or details...">
+            <button class="search-button" onclick="searchStudents()">Search</button>
         </div>
-    </div>
+    
+        <div class="results-list" id="results">
+    
+        </div>
+    </section>
+    
+    <script>
+        function searchStudents() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const selectedGrade = document.getElementById("gradeDropdown").value;
+    const resultsContainer = document.getElementById("results");
+
+    resultsContainer.innerHTML = '';
+
+    const students = [
+
+    ];
+
+    const filteredStudents = students.filter(student => 
+        (selectedGrade === '' || student.grade === selectedGrade) &&
+        (student.name.toLowerCase().includes(query) || student.details.toLowerCase().includes(query))
+    );
+
+    if (filteredStudents.length > 0) {
+        filteredStudents.forEach(student => {
+            const studentElement = document.createElement("div");
+            studentElement.className = "result-item";
+            studentElement.innerHTML = `
+                <div class="profile">
+                    <img src="${student.image}" alt="${student.name}" class="profile-image">
+                    <div class="profile-info">
+                        <h3>${student.name}</h3>
+                        <p>${student.details}</p>
+                        <p>Age: ${student.age}</p>
+                        <p>Gender: ${student.gender}</p>
+                    </div>
+                </div>
+            `;
+            resultsContainer.appendChild(studentElement);
+        });
+    } else {
+        const noResult = document.createElement("p");
+        noResult.textContent = "No students found.";
+        resultsContainer.appendChild(noResult);
+    }
+}
+
+    </script>
 </x-app-layout>
