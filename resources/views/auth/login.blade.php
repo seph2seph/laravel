@@ -5,18 +5,29 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
+        <body >
+            <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+                <div class="container">
+                    <div class="illustration">
+                        <div class="logo-container">
+                            <img src="{{ asset('assets/image/image_no_bg.png') }}" style="max-width: 64px"  alt="Logo" ><h1 class="txt1"> BlueBox</h1>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <h1>Welcome Back </h1>
+                        <p>To keep connected with us, please log in with your email and password.</p>
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-label  for="email" />
+            <x-text-input id="email"  placeholder="Email Address" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+            <x-input-label for="password"  />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password"  placeholder="Password"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
@@ -25,10 +36,11 @@
         </div>
 
         <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+        <div class="options">  
+         
+            <label for="remember_me" class="checkbox" >
+                <input id="remember_me" type="checkbox" name="remember">
+                remember me
             </label>
         </div>
 
@@ -43,5 +55,15 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+
+        <div class="social">
+                <span>Or you can join with:</span>
+                <img src="{{ asset('assets/image/image_no_bg.png') }}" alt="Google">
+                <img src="{{ asset('assets/image/image_no_bg.png') }}" alt="Facebook">
+                <img src="{{ asset('assets/image/image_no_bg.png') }}" alt="Twitter">
+            </div>
+        </div>  
+    </div>
+
     </form>
 </x-guest-layout>

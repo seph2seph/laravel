@@ -1,14 +1,12 @@
 body {
-    margin: 0;
+
     font-family: 'Roboto', sans-serif;
-    background-image: url("../image/6912325.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-image: url("../image/6912325.jpg"); 
 }
 
 .container {
+    margin-top: 5%;
+    margin-left: 13%;
     display: flex;
     width: 80%;
     max-width: 1000px;
@@ -139,8 +137,7 @@ a{
     color: #3498db;
 }
 .checkbox {
-    display: flex;
-    align-items: center; 
+    display: flex; 
     font-size: 14px; 
     color: #7a8ca5;
 }

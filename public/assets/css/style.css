@@ -13,12 +13,12 @@ html {
 }
 
 body {
-  background-image:url("../image/6912325.jpg"); 
+  background-image:urlurl("{{asset/asset/image/6912325.jpg}}");
   background-color: rgb(4, 3, 41);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  height: 200vh; 
+  height: 100vh; 
   font-family: Arial, sans-serif;
   justify-content: center;
   align-items: center;
@@ -209,7 +209,7 @@ body {
 }
 
 .level-box {
-  background-color: rgba(255, 255, 255, 0.808);
+  background-color: rgba(40, 13, 192, 0.274);
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 10, 10, 3), 0 10px 20px rgba(0, 10, 10, 3);
@@ -257,7 +257,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
