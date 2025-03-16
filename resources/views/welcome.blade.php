@@ -77,7 +77,7 @@
         <div class="container">
 
           <div class="level-box">
-            <a href="search.html" class="level-link">
+            <a href="{{ route('login') }}" class="level-link">
               <div class="student_img"><img src="{{ asset('assets/image/elem.png')}}" alt="Elementary"></div>
               <h2>Elementary</h2>
             </a>
