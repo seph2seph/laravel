@@ -1,5 +1,12 @@
-<x-app-layout>
-    <section>
+
+<header>
+        <h1>Search Student</h1>
+        <div class="link">
+            <a href="">Home</a>
+        </div>
+    </header>
+<section>
+        <link rel="stylesheet" href="{{ asset('assets/css/search_web.css') }}">
         <div class="search-container">
             <select class="grade-dropdown" id="gradeDropdown">
                 <option value="">All Grades</option>
@@ -60,4 +67,3 @@
 }
 
     </script>
-</x-app-layout>
