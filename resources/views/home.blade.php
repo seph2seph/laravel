@@ -19,10 +19,7 @@
                             <img src="{{ asset('assets/image/image_no_bg.png') }}" style="max-width: 67px" alt="Laravel 11 Logo">
                             <span>BlueBox</span>
                         </div>
-                        <button class="navbar-toggle" id="navbar-toggle">
-                            ☰
-                        </button>
-
+                       
                         <ul class="navbar-menu" id="navbar-menu">
                             @if (Route::has('login'))
                             <nav class="-mx-3 flex flex-1 justify-end">
@@ -31,7 +28,7 @@
                                         href="{{ url('/dashboard') }}"
                                         
                                     >
-                                        Dashboard
+                                        Student List
                                     </a>
                                 @else
                                     <a
@@ -53,10 +50,20 @@
                             </nav>
                         @endif
                     </header>
+    
+                        <!-- Authentication -->
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
                     
 
-                            <li><a href="#footer-bottom">About</a></li>
-                            <li><a href="#footer-contact">Contact</a></li>
+                            
                         </ul>
                  </nav>
         <div >
@@ -78,7 +85,7 @@
         <div class="container">
 
           <div class="level-box">
-            <a href="{{ route('login') }}" class="level-link">
+            <a href="{{ route('dashboard') }}" class="level-link">
               <div class="student_img"><img src="{{ asset('assets/image/elem.png')}}" alt="Elementary"></div>
               <h2>Elementary</h2>
             </a>

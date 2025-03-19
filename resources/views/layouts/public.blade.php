@@ -1,9 +1,12 @@
 
 <header>
-        <h1>Search Student</h1>
+        <h1>List of Students</h1>
+        
+    
         <div class="link">
-            <a href="">Home</a>
+            <a href="{{ route('home')}}">↩</a>
         </div>
+
     </header>
 <section>
         <link rel="stylesheet" href="{{ asset('assets/css/search_web.css') }}">

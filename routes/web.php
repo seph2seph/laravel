@@ -13,10 +13,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     $yearLevels = AppConstants::YEAR_LEVELS;
     return view('dashboard', compact('yearLevels'));
-
-
-
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/home', function () {
+    return view('home');
+})->middleware(['auth', 'verified'])->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
