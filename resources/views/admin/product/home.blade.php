@@ -29,7 +29,7 @@
                                 </div>
                             @endif 
 
-                            <style>
+    <style>
         body{
            color: white;
         }
@@ -93,6 +93,7 @@
                     <th>Age</th>
                     <th>Section</th>
                     <th>Contact</th>
+                    <th>Year Level</th>
                     <th>Gender</th>
                     <th>Actions</th>
                 </tr>
@@ -114,6 +115,7 @@
                     <td>{{ $product->age }}</td>
                     <td>{{ $product->section }}</td>
                     <td>{{ $product->contact }}</td>
+                    <td>{{ $product->year_level}}</td>
                     <td>{{ $product->gender }}</td>
                     <td class="actions">
                         <a href="{{ route('admin/products/edit', ['id'=>$product->id]) }}">

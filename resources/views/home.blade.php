@@ -9,17 +9,17 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 
-        <!-- Styles / Scripts -->
+        <!-- Styles / Scripts --> 
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <nav class="navbar">
                         <div class="navbar-brand">
                             <img src="{{ asset('assets/image/image_no_bg.png') }}" style="max-width: 67px" alt="Laravel 11 Logo">
-                            <span>BlueBox</span>
+                            <span style="position:relative; top:-15px;  font-size: 24px; font-weight: bold; color: #3490dc;">BlueBox</span>
                         </div>
-                       
+                        
                         <ul class="navbar-menu" id="navbar-menu">
                             @if (Route::has('login'))
                             <nav class="-mx-3 flex flex-1 justify-end">
@@ -69,47 +69,33 @@
         <div >
             <br><br><br>
             <section class="hero">
-        <h1>Empowering Students, One Step at a Time</h1>
-            <p>Welcome to BlueBox, your go-to platform for comprehensive student information. Explore our resources and tools to enhance your learning experience.</p>
-            <a href="#txt1" class="cta-button">Go to Student's info</a>
+
       </section>
       
 <br><br><br><br><br><br><br><br>
 
     <section class="background_level">
       <br><br><br>
-      <div id="txt1"><h1>Student Level</h1></div>
-      <br><br>
-      <section class="level-selection">
-        
-        <div class="container">
+      <h1 class="h1_text">ELEMENTARY VISION</h1>
+      <p class="ptext">A relevant quality basic education.</p>
 
-          <div class="level-box">
-            <a href="{{ route('dashboard') }}" class="level-link">
-              <div class="student_img"><img src="{{ asset('assets/image/elem.png')}}" alt="Elementary"></div>
-              <h2>Elementary</h2>
-            </a>
-          </div>
-          <div class="level-box" onclick="comingSoon()">
-            <a href="#" class="level-link">
-              <div class="student_img"><img src="{{ asset('assets/image/hs.png')}}" alt="Elementary"></div>
-              <h2>High School</h2>
-            </a>
-          </div>
-          <div class="level-box" onclick="comingSoon()">
-            <a href="#" class="level-link">
-              <div class="student_img1"><img src="{{ asset('assets/image/shs.png') }}" alt="Elementary"></div>
-              <h2>Senior High</h2>
-            </a>
-          </div>
-          <div class="level-box" onclick="comingSoon()">
-            <a href="#" class="level-link">
-              <div class="student_img2"><img src="{{ asset('assets/image/elem.png')}}" alt="Elementary"></div>
-              <h2>College</h2>
-            </a>
-          </div>
-        </div>
-      </section>
+      <h1 class="h1_text">ELEMENTARY MISSION</h1>
+      <p class="ptext">Render quality Christian instructional services.</p>
+
+      <h1 class="h1_text">GOAL</h1>
+      <p class="ptext">The FCU Elementary School aims for the total development of the child for the attainment of the highest quality of life.</p>
+
+      <h1 class="h1_text">PROGRAM EDUCATIONAL OBJECTIVES</h1>
+       <ol class="objectives">
+        <li>To manifest the Christian faith, beliefs, and love in the life of the pupils in line with the Christian Mission of the school.</li>
+        <li>To equip children with the basic skills in Reading, Language, Writing, Mathematics, and other subject areas in preparation for the next higher-level education in search of academic excellence.</li>
+        <li>To instill in them moral values, love of country, countrymen, and culture, and to train them to be morally upright citizens and responsible leaders of the school, community, and nation.</li>
+        <li>To expose pupils and let them participate in religious, cultural, and civic activities to develop their potentials as mature, responsible individuals.</li>
+        <li>To provide opportunities for pupils to learn and practice basic health habits, cleanliness, and develop skills and attitudes of good workmanship, following simple directions to develop a wholesome, healthy, wise, and competent personality.</li>
+        <li>To promote and maintain a wholesome pupil-parent-teacher relationship in the school and community.</li>
+    </ol>
+
+    
       <br><br><br><br>
     </section>
 

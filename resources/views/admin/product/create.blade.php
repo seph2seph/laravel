@@ -5,17 +5,17 @@
         </h2>
     </x-slot>
     
-                         <a href="{{ route('admin/products') }}">
-                            <button style="width: 50px; margin-top: 20px; margin-left: 20px; padding: 10px 20px; font-size: 16px; background-color: blue; color: white; border: none; cursor: pointer; border-radius: 5px;">
-                            {{ __('⤶') }}
-                            </button>
-                        </a>
+    <a href="{{ route('admin/products') }}">
+        <button style="width: 50px; margin-top: 20px; margin-left: 20px; padding: 10px 20px; font-size: 16px; background-color: blue; color: white; border: none; cursor: pointer; border-radius: 5px;">
+            {{ __('⤶') }}
+        </button>
+    </a>
+                       
     <style>
         .container {
-            position: relative;
             margin-top: 30px;
             margin-left: 450px;
-            width: 90%;
+            width: 100%;
             max-width: 400px;
             background: #1f2937;
             padding: 20px;
@@ -118,6 +118,16 @@
                 <option value="d">D</option>
             </select>
                 
+            <label for="year_level">Year Level:</label>
+            <select id="year_level" name="year_level" required>
+                    <option value="">Select</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+            </select>
 
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
@@ -131,7 +141,7 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-</body>
+
     
    
 

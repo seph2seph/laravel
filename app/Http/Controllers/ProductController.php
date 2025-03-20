@@ -31,6 +31,7 @@ class ProductController extends Controller
             'section' => 'required',
             'contact' => 'required',
             'gender' => 'required',
+            'year_level' => 'required',
         ]); 
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('uploads/products', 'public');
@@ -48,6 +49,7 @@ class ProductController extends Controller
                 'section' => $request->section,
                 'contact' => $request->contact,
                 'gender' => $request->gender,
+                'year_level' => $request->year_level,
             ]);
         
             if ($data) {
@@ -76,6 +78,7 @@ class ProductController extends Controller
                 'section' => 'required',
                 'contact' => 'required',
                 'gender' => 'required',
+                'year_level' => 'required',
             ]);
 
             $product = Product::findOrFail($id);
@@ -98,6 +101,7 @@ class ProductController extends Controller
                 'section' => $request->section,
                 'contact' => $request->contact,
                 'gender' => $request->gender,
+                'year_level' => $request->year_level,
             ]);
 
             if ($product) {

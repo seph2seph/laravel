@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('age');
             $table->string('section');
             $table->string('contact');
+            $table->string('year_level');
             $table->text('gender');
             $table->timestamps();
         });

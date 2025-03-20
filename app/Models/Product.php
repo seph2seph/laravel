@@ -16,6 +16,7 @@ class Product extends Model
         'last_name',
         'age',
         'section',
+        'year_level',
         'contact',
         'gender',
     ];

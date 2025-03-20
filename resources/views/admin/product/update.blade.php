@@ -116,6 +116,17 @@
                 <option value="d">D</option>
             </select>
 
+            <label for="year_level">Year Level:</label>
+            <select id="year_level" name="year_level" required>
+                    <option value="">Select</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+            </select>  
+
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" value="{{ $product->gender }}" required>
                 <option value="">Select</option>

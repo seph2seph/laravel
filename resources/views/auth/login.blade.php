@@ -5,7 +5,7 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <body >
+    <body >
             <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
                 <div class="container">
                     <div class="illustration">

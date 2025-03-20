@@ -17,7 +17,7 @@
     <nav class="navbar">
                         <div class="navbar-brand">
                             <img src="{{ asset('assets/image/image_no_bg.png') }}" style="max-width: 67px" alt="Laravel 11 Logo">
-                            <span>BlueBox</span>
+                            <span style="position:relative; top:-15px;  font-size: 24px; font-weight: bold; color: #3490dc;">BlueBox</span>
                         </div>
                         <button class="navbar-toggle" id="navbar-toggle">
                             ☰
@@ -42,12 +42,7 @@
                                     </a>
 
                                     @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                           
-                                        >
-                                            Register
-                                        </a>
+                                       
                                     @endif
                                 @endauth
                             </nav>
@@ -85,20 +80,14 @@
           </div>
           <div class="level-box" onclick="comingSoon()">
             <a href="#" class="level-link">
-              <div class="student_img"><img src="{{ asset('assets/image/hs.png')}}" alt="Elementary"></div>
-              <h2>High School</h2>
+              <div class="student_imgs"><img src="{{ asset('assets/image/hs.png')}}" alt="Elementary"></div>
+              <h2>Coming Soon</h2>
             </a>
           </div>
           <div class="level-box" onclick="comingSoon()">
             <a href="#" class="level-link">
               <div class="student_img1"><img src="{{ asset('assets/image/shs.png') }}" alt="Elementary"></div>
-              <h2>Senior High</h2>
-            </a>
-          </div>
-          <div class="level-box" onclick="comingSoon()">
-            <a href="#" class="level-link">
-              <div class="student_img2"><img src="{{ asset('assets/image/elem.png')}}" alt="Elementary"></div>
-              <h2>College</h2>
+              <h2>Coming Soon</h2>
             </a>
           </div>
         </div>

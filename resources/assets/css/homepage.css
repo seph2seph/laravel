@@ -13,12 +13,12 @@ html {
 }
 
 body {
-  background-image:urlurl("{{asset/asset/image/6912325.jpg}}");
+  background-image:url("../image/6912325.jpg"); 
   background-color: rgb(4, 3, 41);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  height: 100vh; 
+  height: 200vh; 
   font-family: Arial, sans-serif;
   justify-content: center;
   align-items: center;
@@ -184,16 +184,6 @@ body {
   position: absolute;
   top: 0;
   left: -50px;
- 
-}
-.student_imgs {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -50px;
   z-index: -1;
 }
 .student_img1 {
@@ -219,7 +209,7 @@ body {
 }
 
 .level-box {
-  background-color: rgba(40, 13, 192, 0.274);
+  background-color: rgba(255, 255, 255, 0.808);
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 10, 10, 3), 0 10px 20px rgba(0, 10, 10, 3);
@@ -267,7 +257,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }

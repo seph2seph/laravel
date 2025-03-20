@@ -13,6 +13,7 @@
             <link rel="stylesheet" href="{{ asset('assets/css/search_web.css') }}">
             <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
             <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
             <script src="{{ asset('assets/js/homepage.js') }}"></script>
             <!-- Scripts -->
             @vite(['resources/css/app.css', 'resources/js/app.js'])
