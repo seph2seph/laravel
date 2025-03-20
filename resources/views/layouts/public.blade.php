@@ -28,6 +28,59 @@
         </div>
     </section>
     
+    <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Profile</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Middle Name</th>
+                    <th>Age</th>
+                    <th>Section</th>
+                    <th>Contact</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($products as $product)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>
+    @if ($product->image)
+        <img src="{{ asset('storage/' . $product->image) }}" class="w-10 h-10 rounded-full" alt="Profile Image">
+    @else
+        <span>No Image</span>
+    @endif
+</td>
+                    <td>{{ $product->first_name }}</td>
+                    <td>{{ $product->middle_name }}</td>
+                    <td>{{ $product->last_name }}</td>
+                    <td>{{ $product->age }}</td>
+                    <td>{{ $product->section }}</td>
+                    <td>{{ $product->contact }}</td>
+                    <td>{{ $product->gender }}</td>
+                    <td class="actions">
+                        <a href="{{ route('admin/products/edit', ['id'=>$product->id]) }}">
+                            <button class="edit">✏️</button>
+                        </a>
+                        <form action="{{ route('admin/products/destroy', $product->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="delete">🗑️</button>
+                        </form>
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="10" class="text-center">Product not found</td>
+                </tr>
+                @endforelse
+            </tbody>
+        </table>
+
+    
     <script>
         function searchStudents() {
     const query = document.getElementById("searchInput").value.toLowerCase();

@@ -16,7 +16,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->usertype != 'admin'){
+        if (Auth::user()->role->role_type != 'admin'){
             return redirect('home')->with('error', 'You are not authorized to access this page');
         }
 

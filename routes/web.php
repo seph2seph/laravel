@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Constants\AppConstants;
+use App\Models\Product;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,7 +13,8 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     $yearLevels = AppConstants::YEAR_LEVELS;
-    return view('dashboard', compact('yearLevels'));
+    $products = Product::orderBy('id', 'desc')->get();
+    return view('dashboard', compact('yearLevels', 'products'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/home', function () {
@@ -28,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function () {
   
-    Route::get('admin/dashboard', [HomeController::class, 'index']);
+    Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
 
     Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
 
