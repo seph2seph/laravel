@@ -9,20 +9,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+                    {{ __("Welcome to the Admin Dashboard") }}
                     <br><br><br><br>
-                    <p>
-                        <h2> 
-                        
-                        </h2>
                         <a href="products">
                             <button style="padding: 10px 20px; font-size: 16px; background-color: blue; color: white; border: none; cursor: pointer; border-radius: 5px;">
                             {{ __('List of Students') }}
                             </button>
                         </a>
-
-                    </p>
-                    <br><br>    
                     
                 </div>
             </div>

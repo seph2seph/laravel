@@ -26,12 +26,13 @@ class UsersTableSeeder extends Seeder
 
         $user = [
             [
-            'username' => 'student',
-            'email' => 'student@gmail.com',
+            'username' => 'students',
+            'email' => 'user@gmail.com',
             'password' => Hash::make(value: 'student123'),
-            'role_id' => 2, // Student,
+            'role_id' => 2,
             ]
+
         ];
-        DB::table(table:'users')->insert($user);
+        
     }
 }

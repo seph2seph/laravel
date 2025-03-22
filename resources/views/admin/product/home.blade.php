@@ -86,6 +86,7 @@
             <thead>
                 <tr>
                     <th>#</th>
+                    <th>LRN</th>
                     <th>Profile</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -95,20 +96,23 @@
                     <th>Contact</th>
                     <th>Year Level</th>
                     <th>Gender</th>
+                    <th>Address</th>    
                     <th>Actions</th>
+
                 </tr>
             </thead>
             <tbody>
                 @forelse ($products as $product)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
+                    <td>{{ $product->lrn }}</td>
                     <td>
-    @if ($product->image)
-        <img src="{{ asset('storage/' . $product->image) }}" class="w-10 h-10 rounded-full" alt="Profile Image">
-    @else
-        <span>No Image</span>
-    @endif
-</td>
+                    @if ($product->image)
+                        <img src="{{ asset('storage/' . $product->image) }}" class="w-10 h-10 rounded-full" alt="Profile Image">
+                    @else
+                        <span>No Image</span>
+                    @endif
+                    </td>               
                     <td>{{ $product->first_name }}</td>
                     <td>{{ $product->middle_name }}</td>
                     <td>{{ $product->last_name }}</td>
@@ -117,6 +121,7 @@
                     <td>{{ $product->contact }}</td>
                     <td>{{ $product->year_level}}</td>
                     <td>{{ $product->gender }}</td>
+                    <td>{{ $product->address }}</td>
                     <td class="actions">
                         <a href="{{ route('admin/products/edit', ['id'=>$product->id]) }}">
                             <button class="edit">✏️</button>
@@ -130,7 +135,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="10" class="text-center">Product not found</td>
+                    <td colspan="15" class="text-center">Product not found</td>
                 </tr>
                 @endforelse
             </tbody>

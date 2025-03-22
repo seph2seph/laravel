@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('image');
+            $table->string('lrn');
             $table->string('first_name');
             $table->string('middle_name');
             $table->string('last_name');
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->string('contact');
             $table->string('year_level');
             $table->text('gender');
+            $table->text('address');
             $table->timestamps();
         });
     }

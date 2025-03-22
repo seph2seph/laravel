@@ -10,6 +10,7 @@ class Product extends Model
     use HasFactory;
     protected $table = 'products';
     protected $fillable = [
+        'lrn',
         'image',
         'first_name',
         'middle_name',
@@ -19,5 +20,6 @@ class Product extends Model
         'year_level',
         'contact',
         'gender',
+        'address',
     ];
 }

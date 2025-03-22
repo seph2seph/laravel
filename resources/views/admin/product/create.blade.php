@@ -14,9 +14,9 @@
     <style>
         .container {
             margin-top: 30px;
+            max-width: 600px;
             margin-left: 450px;
             width: 100%;
-            max-width: 400px;
             background: #1f2937;
             padding: 20px;
             border-radius: 10px;
@@ -29,7 +29,7 @@
         input, select, textarea {
             width: 100%;
             padding: 10px;
-            margin: 5px 0 10px;
+            margin: 10px 0 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
@@ -44,6 +44,7 @@
             cursor: pointer;
             width: 100%;
             font-size: 1rem;
+            margin-top: 10px;
         }
         button:hover {
             background-color: #4cae4c;
@@ -68,6 +69,16 @@
         <form action="{{ route('admin/products/store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
+
+             
+            <label for="lrn">LRN:</label>
+            <input type="tel" id="lrn" name="lrn" required>
+            @error('lrn')
+                <div class="text-danger" role="alert">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <label for="image">Profile:</label>
             <input type="file" id="image" name="image" enctype="multipart/form-data">
             @error('image')
@@ -75,7 +86,7 @@
                     {{ $message }}
                 </div>
             @enderror
-
+           
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name" required>
             @error('first_name')
@@ -112,10 +123,10 @@
             <label for="section">Section:</label>
             <select id="section" name="section" required>
                 <option value="">Select</option>
-                <option value="a">A</option>
-                <option value="b">B</option>
-                <option value="c">C</option>
-                <option value="d">D</option>
+                <option value="a">Earth</option>
+                <option value="b">Saturn</option>
+                <option value="c">Jupitor</option>
+                <option value="d">Mars</option>
             </select>
                 
             <label for="year_level">Year Level:</label>
@@ -136,7 +147,15 @@
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
-
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            @error('address')
+                <div class="text-danger" role="alert">
+                    {{ $message }}
+                </div>
+            @enderror
+            
 
             <button type="submit">Submit</button>
         </form>

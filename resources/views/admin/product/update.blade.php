@@ -5,10 +5,10 @@
         </h2>
     </x-slot>
     <a href="{{ route('admin/products') }}">
-                            <button style="width: 50px; margin-top: 20px; margin-left: 20px; padding: 10px 20px; font-size: 16px; background-color: blue; color: white; border: none; cursor: pointer; border-radius: 5px;">
-                            {{ __('⤶') }}
-                            </button>
-                        </a>
+        <button style="width: 50px; margin-top: 20px; margin-left: 20px; padding: 10px 20px; font-size: 16px; background-color: blue; color: white; border: none; cursor: pointer; border-radius: 5px;">
+            {{ __('⤶') }}
+        </button>
+    </a>
     <style>
         .container {
             position: relative;
@@ -74,6 +74,13 @@
                 </div>
             @enderror
 
+            <label for="lrn">Lrn:</label>
+            <input type="text" id="lrn" name="lrn" value="{{ $product->lrn }}" required >
+            @error('lrn')
+                <div class="text-danger" role="alert">
+                    {{ $message }}
+            @enderror
+
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name" value="{{ $product->first_name }}" required >
             @error('first_name')
@@ -134,6 +141,13 @@
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" value="{{ $product->address }}" required >
+            @error('address')
+                <div class="text-danger" role="alert">
+                    {{ $message }}
+            @enderror
 
 
             <button type="submit" style="background-color:#856305;">Submit</button>

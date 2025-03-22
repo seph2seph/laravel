@@ -16,7 +16,7 @@ class RolesTableSeeder extends Seeder
     {
         $roles = [
             ['role_type' => 'admin',],
-            ['role_type' => 'student',],
+            ['role_type' => 'students',],
         ];
         DB::table(table:'roles')->insert(values: $roles);
     }

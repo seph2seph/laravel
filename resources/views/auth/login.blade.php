@@ -2,11 +2,11 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <body>
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 
-    <body >
-            <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
                 <div class="container">
                     <div class="illustration">
                         <div class="logo-container">
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="form">
-                        <h1>Welcome Back </h1>
+                        <h1>Welcome to BlueBox </h1>
                         <p>To keep connected with us, please log in with your email and password.</p>
         <!-- Email Address -->
         <div>
@@ -57,9 +57,7 @@
         </div>
 
         <div class="social">
-                <span>Or you can join with:</span>
-                <img src="{{ asset('assets/image/image_no_bg.png') }}" alt="Google">
-                <img src="{{ asset('assets/image/image_no_bg.png') }}" alt="Facebook">
+                <span>BlueBox:</span>
                 <img src="{{ asset('assets/image/image_no_bg.png') }}" alt="Twitter">
             </div>
         </div>  

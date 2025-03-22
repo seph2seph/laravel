@@ -23,6 +23,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'lrn' => 'required',
             'first_name' => 'required',
             'middle_name' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',    
@@ -32,6 +33,7 @@ class ProductController extends Controller
             'contact' => 'required',
             'gender' => 'required',
             'year_level' => 'required',
+            'address' => 'required',
         ]); 
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('uploads/products', 'public');
@@ -41,6 +43,7 @@ class ProductController extends Controller
             }
 
             $data = Product::create([
+                'lrn' => $request->lrn,
                 'image' => $imagePath,
                 'first_name' => $request->first_name,
                 'middle_name' => $request->middle_name,
@@ -50,6 +53,7 @@ class ProductController extends Controller
                 'contact' => $request->contact,
                 'gender' => $request->gender,
                 'year_level' => $request->year_level,
+                'address' => $request->address,
             ]);
         
             if ($data) {
@@ -70,6 +74,7 @@ class ProductController extends Controller
         public function update(Request $request, $id)
         {
             $request->validate([
+                'lrn' => 'required',
                 'first_name' => 'required',
                 'middle_name' => 'required',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',    
@@ -79,6 +84,7 @@ class ProductController extends Controller
                 'contact' => 'required',
                 'gender' => 'required',
                 'year_level' => 'required',
+                'address' => 'required',
             ]);
 
             $product = Product::findOrFail($id);
@@ -94,6 +100,7 @@ class ProductController extends Controller
 
             $product->update([
                 'image' => $imagePath,
+                'lrn' => $request->lrn,
                 'first_name' => $request->first_name,
                 'middle_name' => $request->middle_name,
                 'last_name' => $request->last_name,
@@ -102,6 +109,7 @@ class ProductController extends Controller
                 'contact' => $request->contact,
                 'gender' => $request->gender,
                 'year_level' => $request->year_level,
+                'address' => $request->address,
             ]);
 
             if ($product) {
