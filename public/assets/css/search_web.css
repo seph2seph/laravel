@@ -140,7 +140,7 @@ header h1 {
 .result-item h3 {
     color: #2c3e50;
     margin: 0 0 10px;
-    font-size: 1.5em; /* Increase font size for name */
+    font-size: 1 em; /* Increase font size for name */
 }
 
 .result-item p {
@@ -192,7 +192,7 @@ header h1 {
     padding-left: 130px;
 }
 .student-name {
-    font-size: 1.4em; /* Adjust font size */
+    font-size: 1 em; /* Adjust font size */
     color: #2c3e50;
     margin-bottom: 10px;
     text-align: left;
@@ -238,4 +238,6 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    top: 100px;
+    position: relative;
 }

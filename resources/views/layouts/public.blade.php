@@ -24,7 +24,27 @@
     </div>
 </section>
 
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>About BlueBox</h3>
+          <p>BlueBox is your trusted platform for seamless student information management. Empowering students and educators every step of the way.</p>
+        </div>
+        <div id="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@bluebox.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 BlueBox Lane, Learning City</p>
+        </div>
+      </div>
+      <div id="footer-bottom">
+        <p>&copy; 2025 BlueBox. All rights reserved.</p>
+      </div>
+    </footer>
 <script>
+    const baseStoragePath = "{{ asset('storage/') }}";
+    const defaultImage = "{{ asset('storage/boyImage.png') }}";
+    
     const students = @json($products);
 
     function searchStudents() {
@@ -44,8 +64,8 @@
             address: student.address,
             grade: String(student.year_level),
             image: student.image 
-                ? `{{ asset('storage/') }}/${student.image}` 
-                : '{{ asset('storage/default.png') }}'
+                ? `${baseStoragePath}/${student.image}` 
+                : defaultImage
         }));
 
         const filteredStudents = studentData.filter(student => 
