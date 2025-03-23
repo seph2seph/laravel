@@ -117,10 +117,10 @@
             <label for="section">Section:</label>
             <select id="section" name="section" value="{{ $product->section }}" required>
                 <option value="">Select</option>
-                <option value="a">A</option>
-                <option value="b">B</option>
-                <option value="c">C</option>
-                <option value="d">D</option>
+                <option value="Gladiolus">Gladiolus</option>
+                <option value="Rose">Rose</option>
+                <option value="Jupitor">Jupitor</option>
+                <option value="Mars">Mars</option>
             </select>
 
             <label for="year_level">Year Level:</label>

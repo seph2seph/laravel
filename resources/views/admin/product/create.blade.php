@@ -123,10 +123,10 @@
             <label for="section">Section:</label>
             <select id="section" name="section" required>
                 <option value="">Select</option>
-                <option value="a">Earth</option>
-                <option value="b">Saturn</option>
-                <option value="c">Jupitor</option>
-                <option value="d">Mars</option>
+                <option value="Gladiolus">Gladiolus</option>
+                <option value="Rose">Rose</option>
+                <option value="Jupitor">Jupitor</option>
+                <option value="Mars">Mars</option>
             </select>
                 
             <label for="year_level">Year Level:</label>
