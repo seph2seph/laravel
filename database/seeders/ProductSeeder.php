@@ -15,8 +15,8 @@ class ProductSeeder extends Seeder
     {
         $products = [
             [
-                'image' => 'public/assets/image/boyImage.jpg',
-                'lrn' => '123456789',
+                'image' => 'images',
+                'lrn' => '42183456789',
                 'first_name' => 'Japeth',
                 'middle_name' => 'bacay',
                 'last_name' => 'Albor',
@@ -28,8 +28,8 @@ class ProductSeeder extends Seeder
                 'address' => 'Brgy.Mongpong, Roxas City'
             ],
             [
-                'image' => 'public/assets/image/boyImage.jpg',
-                'lrn' => '987654321',
+                'image' => 'storage/boyImage.jpg',
+                'lrn' => '4498762154321',
                 'first_name' => 'Reynan',
                 'middle_name' => 'Daria',
                 'last_name' => 'Arcan',
@@ -42,7 +42,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'image' => 'public/assets/image/boyImage.jpg',
-                'lrn' => '987654321',
+                'lrn' => '4356761254321',
                 'first_name' => 'John Daniel',
                 'middle_name' => 'De Leon',
                 'last_name' => 'Asis',
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'image' => 'public/assets/image/boyImage.jpg',
-                'lrn' => '987654321',
+                'lrn' => '487543414321',
                 'first_name' => 'Elian',
                 'middle_name' => 'Bones',
                 'last_name' => 'Baguyo',
@@ -68,7 +68,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'image' => 'public/assets/image/boyImage.jpg',
-                'lrn' => '987654321',
+                'lrn' => '480231224321',
                 'first_name' => 'Antonio Deandre',
                 'middle_name' => 'Laserna',
                 'last_name' => 'Barredo',

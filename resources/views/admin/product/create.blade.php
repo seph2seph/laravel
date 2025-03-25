@@ -10,7 +10,8 @@
             {{ __('⤶') }}
         </button>
     </a>
-                       
+    
+
     <style>
         .container {
             margin-top: 30px;

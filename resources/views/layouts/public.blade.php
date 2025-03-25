@@ -42,9 +42,6 @@
       </div>
     </footer>
 <script>
-    const baseStoragePath = "{{ asset('storage/') }}";
-    const defaultImage = "{{ asset('storage/boyImage.png') }}";
-    
     const students = @json($products);
 
     function searchStudents() {
@@ -64,14 +61,19 @@
             address: student.address,
             grade: String(student.year_level),
             image: student.image 
-                ? `${baseStoragePath}/${student.image}` 
-                : defaultImage
+    ? `{{ url('storage') }}/${student.image}` 
+    : defaultImage
         }));
 
         const filteredStudents = studentData.filter(student => 
-            (selectedGrade === '' || student.grade === selectedGrade) &&
-            student.name.toLowerCase().includes(query)
-        );
+    (selectedGrade === '' || student.grade === selectedGrade) &&
+    (
+        student.name.toLowerCase().includes(query) ||
+        student.lrn.toString().includes(query) ||
+        student.section.toLowerCase().includes(query) ||
+        student.address.toLowerCase().includes(query)
+    )
+);
 
         if (filteredStudents.length > 0) {
             filteredStudents.forEach(student => {
@@ -87,7 +89,7 @@
         studentElement.className = "result-item";
         studentElement.innerHTML = `
             <div class="profile">
-                <img src="${student.image}" alt="${student.name}" class="profile-image">
+                <img src="${student.image}" alt="{{ '${student.name}' }}" class="profile-image">
                 <div class="profile-info">
                     <h3 class ="student-name">${student.name}</h3>
                     <p class="student-lrn">LRN: ${student.lrn}</p>

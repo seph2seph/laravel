@@ -30,6 +30,12 @@
                                     >
                                         Student List
                                     </a>
+                                    <a
+                                        href="{{ url('admin/dashboard') }}"
+                                        
+                                    >
+                                        Admin
+                                    </a>
                                 @else
                                     <a
                                         href="{{ route('login') }}"
@@ -72,7 +78,7 @@
 
       </section>
       
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
     <section class="background_level">
       <br><br><br>

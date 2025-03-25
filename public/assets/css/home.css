@@ -323,5 +323,6 @@
 .objectives li {
         font-size: 16px;
         margin-bottom: 10px;
-        margin-left: 20 px;
+        margin-left: 20px;
+        position: relative;
     }
